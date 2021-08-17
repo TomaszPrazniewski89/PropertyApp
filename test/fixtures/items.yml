@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  cena: 1
+  metraz: 1
+  poziom: 1
+  telefon: 1
+  opis: MyText
+  pokoje: 1
+
+two:
+  title: MyString
+  cena: 1
+  metraz: 1
+  poziom: 1
+  telefon: 1
+  opis: MyText
+  pokoje: 1
