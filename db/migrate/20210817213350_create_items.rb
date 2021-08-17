@@ -8,6 +8,7 @@ class CreateItems < ActiveRecord::Migration[6.1]
       t.integer :telefon
       t.text :opis
       t.integer :pokoje
+      t.references :category, foreign_key: true
 
       t.timestamps
     end

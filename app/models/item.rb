@@ -1,4 +1,3 @@
 class Item < ApplicationRecord
-  belongs_to :type
-  belongs_to :user
+belongs_to :category, optional: true
 end
