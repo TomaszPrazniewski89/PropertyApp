@@ -1,6 +1,6 @@
 class CategoriesController <ApplicationController
   def index
-
+    binding.pry
     # @categories = Category.where(category_id: nil)
     @categories = Category.where(category_id: params[:id])
 
@@ -9,13 +9,10 @@ class CategoriesController <ApplicationController
 
   def show
 
-    if params[:id].to_i<3
-      @categories = Category.where(category_id: params[:id])
-        render :index
-     else
-       @item = Item.where(category_id: params[:id])
+      binding.pry
+       @item = Item.where(kind_id: params[:id])
       render 'items/index'
-    end
+
 
 
 

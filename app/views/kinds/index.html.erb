@@ -1,0 +1,15 @@
+
+<div class=button-wrap>
+
+<% @kinds.each do |kind| %>
+
+
+
+<li><%= link_to kind.name , kind_path(kind)  %>
+
+
+
+  <% end %>
+
+
+</div>
