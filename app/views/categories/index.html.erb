@@ -1,11 +1,13 @@
+<% binding.pry %>
 
 <div class=button-wrap>
-  <% binding.pry %>
 
   <%# <% @current_category.each do |category| %>
-   <% @subcategories.each do |category| %> 
-
+   <% @current_category.each do |category| %>
+   <% binding.pry %>
   <li><%= link_to category.name , category_path(category)  %></li>
 
   <% end %>
+
+
 </div>
