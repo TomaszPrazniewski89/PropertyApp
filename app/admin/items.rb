@@ -1,4 +1,4 @@
 ActiveAdmin.register Item do
   # editing
-  permit_params :title, :cena, :metraz , :category_id, :telefon ,:opis
+  permit_params :title, :cena, :metraz, :category_id, :telefon, :opis, :pokoje, :poziom
 end

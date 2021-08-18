@@ -1,0 +1,19 @@
+
+<% @item.each do |item| %>
+
+  <div class="container">
+    <h1><%= item.title %></h1>
+
+    <p> cena : <%= item.cena %></p>
+    <p> metraz: <%= item.metraz %></p>
+    <p> poziom: <%= item.poziom %></p>
+    <p> numer telefonu: <%= item.telefon %></p>
+    <section>
+      <p><b>Opis</b></p>
+    <%=  item.opis %>
+    </section>
+
+
+  </div>
+
+<%end %>

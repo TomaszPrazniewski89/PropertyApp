@@ -1,0 +1,8 @@
+<% @item.each do |item| %>
+<div class="container">
+
+<%= link_to item.title, item_path(item) %>
+
+</div>
+
+<% end %>
