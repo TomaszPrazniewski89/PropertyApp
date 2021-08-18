@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_18_182423) do
+ActiveRecord::Schema.define(version: 2021_08_18_195111) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -43,7 +43,9 @@ ActiveRecord::Schema.define(version: 2021_08_18_182423) do
     t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "kind_id"
     t.string "ancestry"
+    t.integer "type_id"
     t.index ["ancestry"], name: "index_categories_on_ancestry"
     t.index ["category_id"], name: "index_categories_on_category_id"
   end
@@ -59,7 +61,14 @@ ActiveRecord::Schema.define(version: 2021_08_18_182423) do
     t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "type_id"
     t.index ["category_id"], name: "index_items_on_category_id"
+  end
+
+  create_table "types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "categories", "categories"

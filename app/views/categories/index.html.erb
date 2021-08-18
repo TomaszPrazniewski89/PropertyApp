@@ -1,13 +1,9 @@
 
 <div class=button-wrap>
-
-  <% @categories.each do |category| %>
   <% binding.pry %>
+
+  <% @current_category.each do |category| %>
   <li><%= link_to category.name , category_path(category)  %></li>
 
-
   <% end %>
-
-
 </div>
-<%# <%= render 'buttons', category: @category %>

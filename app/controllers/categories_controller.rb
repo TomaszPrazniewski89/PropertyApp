@@ -1,29 +1,10 @@
 class CategoriesController <ApplicationController
   def index
+    # w consoli Category.where(category: nil).to_sql
     binding.pry
-    # @categories = Category.where(category_id: nil)
-    @categories = Category.where(category_id: params[:id])
-
-    @subcategoriess =Category.where.not(category_id: nil)
-  end
-
-  def show
-
-      binding.pry
-       @item = Item.where(kind_id: params[:id])
-      render 'items/index'
-
-
-
-
-
+    @current_category = Category.where(category_id: params[:id])
 
 
   end
-
-  def create
-
-  end
-
 
 end
