@@ -2,14 +2,8 @@ class ItemsController < ApplicationController
 
   def index
     binding.pry
-    @category = Category.find_by(id: params[:id])
-    binding.pry
+    @items = Item.all.where(type_id: params[:type_id]).where(category_id: params[:category_id])
 
-    @items = Item.where("category_id=?", @category.id)
-    binding.pry
-
-    Item.where("type_id=?", @category.type_id)
-    binding.pry
   end
 
   def show
