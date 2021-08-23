@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :items
   # resources :categories
   # resources :types
+  get '/types/:id', to: 'categories#index'
 
 resources :types do
 
@@ -20,6 +21,7 @@ end
   # root to: 'categories#index'
   # get '/typ', to: 'types#index'
   root to: 'types#index'
+
 
   #
   # get '/types/:id', to: 'categories#index', as: :type
