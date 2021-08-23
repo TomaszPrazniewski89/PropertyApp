@@ -8,7 +8,7 @@ class ItemsController < ApplicationController
     @items = Item.where("category_id=?", @category.id)
     binding.pry
 
-    @items = Item.where("type_id=?", @category.type_id)
+    Item.where("type_id=?", @category.type_id)
     binding.pry
   end
 
