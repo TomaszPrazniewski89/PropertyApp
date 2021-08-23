@@ -2,7 +2,12 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
+
   resources :items
+  resources :categories
+  resources :types
+
+
 
 
 
@@ -11,12 +16,6 @@ Rails.application.routes.draw do
   # get '/typ', to: 'types#index'
   root to: 'types#index'
 
-
-  get '/types/:id', to: 'categories#index', as: :type
-
-  get '/category/:id', to: 'items#index', as: :category
-
-  get '/items/:id', to: 'items#show'
 
 
 

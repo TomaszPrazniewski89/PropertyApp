@@ -1,8 +1,7 @@
 class CategoriesController <ApplicationController
   def index
     binding.pry
-    @current_category = Category.where("type_id=?", params[:id].to_i)
-
+    @categories = Category.all
   end
 
 
