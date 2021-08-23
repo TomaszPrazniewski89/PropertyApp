@@ -65,10 +65,13 @@ ActiveRecord::Schema.define(version: 2021_08_23_111636) do
 
   create_table "types", force: :cascade do |t|
     t.string "name"
+    t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_types_on_category_id"
   end
 
   add_foreign_key "categories", "categories"
   add_foreign_key "items", "categories"
+  add_foreign_key "types", "categories"
 end
