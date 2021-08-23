@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # resources :types
 
 resources :types do
+
   resources :categories do
     resources :items
   end
