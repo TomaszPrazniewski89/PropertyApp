@@ -3,4 +3,5 @@ class Item < ApplicationRecord
   # belongs_to :category, optional: true
   belongs_to :category
   belongs_to :type
+  mount_uploader :image, ImageUploader
 end

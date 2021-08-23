@@ -1,11 +1,20 @@
+
 <% binding.pry %>
+
 <div class="container">
-  <%= @items.opis  %>
+  Title:<%= @items.title  %>
 
 </div>
+<div class="container">
+  <%= @items.opis  %>
+</div>
 <%= @items.id %>
-<%= @items.title  %>
 <%= @items.metraz  %>
 <%= @items.poziom  %>
 <%= @items.telefon  %>
 <%= @items.pokoje  %>
+
+<% if @items.image.present? %>
+    <%=image_tag(@items.image_url) %>
+
+<% end %>

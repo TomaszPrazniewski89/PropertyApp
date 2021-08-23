@@ -1,8 +1,11 @@
 <% @items.each do |item| %>
+
+
+
 <%= binding.pry%>
 <div class="container">
 
-<%= link_to item.title, items_path %>
+<%= link_to item.title, type_category_item_path(id: item.id) %>
 
 </div>
 
