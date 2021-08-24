@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2021_08_23_221846) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string "name"
+    t.string "name" ,null:false
     t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -49,23 +49,23 @@ ActiveRecord::Schema.define(version: 2021_08_23_221846) do
   end
 
   create_table "items", force: :cascade do |t|
-    t.string "title"
-    t.integer "cena"
-    t.integer "metraz"
-    t.integer "poziom"
-    t.integer "telefon"
-    t.text "opis"
-    t.integer "pokoje"
-    t.integer "category_id"
+    t.string "title" ,null: false
+    t.integer "cena",null: false
+    t.integer "metraz",null: false
+    t.integer "poziom",null: false
+    t.integer "telefon",null: false
+    t.text "opis",null: false
+    t.integer "pokoje",null: false
+    t.integer "category_id",null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "type_id"
-    t.string "image"
+    t.integer "type_id",null: false
+    t.string "image",null: false
     t.index ["category_id"], name: "index_items_on_category_id"
   end
 
   create_table "types", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
