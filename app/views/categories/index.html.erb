@@ -1,13 +1,12 @@
-<% binding.pry %>
 
-<div class=button-wrap>
+
+<div class="center">
 
   <%# <% @categories.each do |category| %>
    <% @categories.each do |category| %>
-   <% binding.pry %>
-  <li><%= link_to category.name , type_category_items_path(category_id: category.id)  %></li>
+
+  <%= link_to category.name , type_category_items_path(category_id: category.id),class: "btn btn-primary btn-lg ", role: "button"  %>
+  <div class="divider"></div>
 
   <% end %>
-
-
 </div>

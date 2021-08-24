@@ -1,8 +1,10 @@
 
+<div class="center" >
 
 <% @types.each do |type| %>
-<% binding.pry %>
 
-  <%= link_to type.name, type_categories_path(type_id: type.id) %>
+  <%= link_to type.name, type_categories_path(type_id: type.id),class: "btn btn-primary btn-lg ", role: "button" %>
+<div class="divider"></div>
 
 <% end %>
+</div>

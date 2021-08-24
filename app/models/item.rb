@@ -7,14 +7,13 @@ class Item < ApplicationRecord
 
 
 
-  validates :title, presence: true
-  validates :cena, presence: true
+  validates :title, presence: true ,length: {minimum:10, maximum: 30}
+  validates :cena, presence: true, numericality: true
   validates :metraz, presence: true
-  validates :poziom, presence: true
-  validates :telefon, presence: true
-  validates :telefon, presence: true
+  validates :poziom, presence: true, numericality: true
+  validates :telefon, presence: true, numericality: true, length:{ minimum: 9, maximum:10}
   validates :opis, presence: true
-  validates :pokoje, presence: true
+  validates :pokoje, presence: true, numericality: true
   validates :type_id, presence: true
   validates :image, presence: true
   validates :category_id, presence: true
