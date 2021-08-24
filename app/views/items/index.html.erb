@@ -5,6 +5,8 @@
 <div class="container">
 
   <p class="a"><%= link_to item.title, type_category_item_path(id: item.id), class: "text-decoration-none" %></p>
+<% binding.pry %>
+  <%= logo_url(item.id, item.updated_at, item.image).url %>
 
 
 
