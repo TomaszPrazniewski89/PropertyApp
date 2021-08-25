@@ -1,6 +1,4 @@
 
-<% binding.pry %>
-
 <div class="container">
   Title:<%= @items.title  %>
 
@@ -15,6 +13,7 @@
 <%= @items.pokoje  %>
 
 <% if @items.image.present? %>
+<%= binding.pry %>
     <%=image_tag(@items.image_url) %>
 
 <% end %>
