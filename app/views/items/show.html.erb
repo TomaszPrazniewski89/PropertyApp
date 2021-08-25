@@ -1,19 +1,22 @@
 
 <div class="container">
   Title:<%= @items.title  %>
-
+<div class="">
+  Cena: <%= @items.cena %>
+</div>
 </div>
 <div class="container">
-  <%= @items.opis  %>
+  Opis: <br><%= @items.opis  %>
 </div>
-<%= @items.id %>
-<%= @items.metraz  %>
-<%= @items.poziom  %>
-<%= @items.telefon  %>
-<%= @items.pokoje  %>
+<ul>
+  <li><p><%=@items.metraz%></p></li>
+  <li><p><%= @items.poziom %></p></li>
+  <li><p><%= @items.pokoje %></p></li>
+
+</ul>
+
 
 <% if @items.image.present? %>
-<%= binding.pry %>
     <%=image_tag(@items.image_url) %>
 
 <% end %>
