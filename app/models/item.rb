@@ -5,6 +5,9 @@ class Item < ApplicationRecord
   belongs_to :type
   mount_uploader :image, ImageUploader
 
+  mount_uploaders :images, ImageUploader
+
+
   validates :title, presence: true, length: { minimum: 10, maximum: 50 }
   validates :cena, presence: true, numericality: true
   validates :metraz, presence: true
