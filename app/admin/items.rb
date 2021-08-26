@@ -1,6 +1,6 @@
 ActiveAdmin.register Item do
   # editing
-  permit_params :category_id, :type_id, :title, :cena, :metraz, :telefon, :opis, :pokoje, :poziom, :image,{images: []}
+  permit_params :category_id, :type_id, :title, :cena, :metraz, :telefon, :opis, :pokoje, :poziom, :phone ,:image,{images: []}
 
   form(html: { multipart: true }) do |f|
       f.inputs do
@@ -14,6 +14,7 @@ ActiveAdmin.register Item do
         f.input :pokoje
         f.input :poziom
         f.input :image
+        f.input :phone
 
         f.file_field :images,  multiple: true
       end

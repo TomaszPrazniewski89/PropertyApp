@@ -1,3 +1,26 @@
+<style>
+  .swiper-slide {
+    height: 250px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+  }
+
+  .pink {
+    background-color: lightpink;
+  }
+
+  .green {
+    background-color: lightgreen;
+  }
+
+  .blue {
+    background-color: lightblue;
+  }
+</style>
+
+
+
 
 <div class="container">
   Title:<%= @items.title  %>
@@ -21,39 +44,24 @@
 
 <%# <% end %>
 
-<% binding.pry %>
 
-<% if @items.images.size == 1 %>
-<% binding.pry%>
-    <img class="d-block w-100" src="<%= cl_image_path @ad.photos.first.key %>" alt="photo" >
 
-<% elsif @items.images.size > 1 %>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <% @items.images.size.times do |i| %>
-            <% binding.pry %>
-                <li data-target="#carouselExampleIndicators" data-slide-to="<%= i %>" class="<%= "active" if i.zero? %>"></li>
-            <% end %>
-        </ol>
 
-        <div class="carousel-inner">
-            <% @items.images.each_with_index do |photo, index| %>
-                <div class="carousel-item <%= "active" unless index.zero? %>">
-                  <% binding.pry %>
 
-                    <img class="d-block w-50" src="<%= photo.url %>" alt="<%= index.ordinalize %> image">
-                </div>
-            <% end %>
-        </div>
 
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
 
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-<% end %>
+
+<div data-controller="carousel" class="swiper-container w-25 my-5"
+    data-carousel-options-value='{
+    "pagination": { "el": ".swiper-pagination",
+                    "dynamicBullets": "true" },
+    "navigation": { "nextEl": ".swiper-button-next",
+                    "prevEl": ".swiper-button-prev"}}'>
+  ...
+  <!-- Pagination (... or 1/10 or progress bar) -->
+  <div class="swiper-pagination"></div>
+
+  <!-- Navigation buttons (< >) -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div> 

@@ -28,6 +28,8 @@ gem 'rmagick'
 gem 'mini_magick'
 gem 'pry'
 gem 'rubocop'
+gem 'phonelib'
+gem 'twilio-ruby'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
