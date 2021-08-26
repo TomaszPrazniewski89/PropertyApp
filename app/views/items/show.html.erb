@@ -20,3 +20,9 @@
     <%=image_tag(@items.image_url) %>
 
 <% end %>
+
+<%= binding.pry %>
+
+<%  @items.images.each do |image| %>
+  <%= image_tag(image.url) %>
+<% end %>

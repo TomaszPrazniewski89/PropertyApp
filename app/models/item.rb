@@ -6,6 +6,7 @@ class Item < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   mount_uploaders :images, ImageUploader
+  serialize :images, JSON
 
 
   validates :title, presence: true, length: { minimum: 10, maximum: 50 }
