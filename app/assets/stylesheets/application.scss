@@ -1,6 +1,8 @@
 @import "bootstrap/scss/bootstrap";
 // @import "~swiper/swiper-bundle";
-
+// *= require owl.carousel
+// @import  'owl.theme.default';
+// @import 'owl.theme.default';
 
 // @import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 // @import ''swiper/swiper.scss''
@@ -35,4 +37,11 @@ padding: 10px;
     width:15px;
     height:auto;
     display:inline-block;
+}
+
+.carousel-control-next-icon {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+.carousel-control-prev-icon {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }

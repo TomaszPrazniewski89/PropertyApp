@@ -32,6 +32,7 @@ gem 'pry'
 gem 'rubocop'
 gem 'phonelib'
 gem 'twilio-ruby'
+gem 'owlcarousel-rails'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

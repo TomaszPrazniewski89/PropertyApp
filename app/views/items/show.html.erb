@@ -46,35 +46,26 @@
 
 
 
+<% binding.pry %>
 
 
-<div id = "carousel-example-generic" class= "carousel slide" data-ride= "carousel">
-    <!-- Wrapper for slides -->
-  <div class="carousel-inner">
 
-
-  <% @items.images.each do |p| %>
-    <div class="item ">
-
-        <%=image_tag p.url.to_s, size: "200x200"%>
+  <div class=”carousel-inner”>
+    <%@items.images.each_with_index do |pic,i|%>
+    <div class="carousel-item <%= "active " if i==0 %>">
+         <%= image_tag(pic.url) %>
     </div>
-
-  <!-- Controls -->
-   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-   </a>
-   <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-  <% end %>
-</div>
+    <%end%>
+  </div>
 
 
 
-   <script type="text/javascript">
+
+
+   <!-- <script type="text/javascript">
      jQuery(function($) {
        // $('.carousel').carousel();
        $( '.item:first' ).addClass( 'active');
 
      })
-    </script>
+    </script> -->

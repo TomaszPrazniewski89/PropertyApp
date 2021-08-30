@@ -16,5 +16,12 @@ import 'bootstrap'
 import "controllers"
 import 'swiper/swiper-bundle.min.css'
 // import { createPopper } from '@popperjs/core';
+import '@popperjs/core'
 
 require('jquery')
+// require ('owl.carousel')
+// import "../js/owlcarousel"
+
+
+
+//Owl Carousel
