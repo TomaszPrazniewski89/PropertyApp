@@ -15,3 +15,6 @@ import 'bootstrap'
 
 import "controllers"
 import 'swiper/swiper-bundle.min.css'
+// import { createPopper } from '@popperjs/core';
+
+require('jquery')
