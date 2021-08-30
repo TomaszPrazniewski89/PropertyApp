@@ -46,16 +46,33 @@
 
 
 
-<% binding.pry %>
 
 
 
-  <div class=”carousel-inner”>
-    <%@items.images.each_with_index do |pic,i|%>
-    <div class="carousel-item <%= "active " if i==0 %>">
-         <%= image_tag(pic.url) %>
+
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <%= link_to image_tag(@items.images[0].url,class: "d-block w-40 h-40"),@items.images[0].url%>
+      </div>
+
+      <div class="carousel-item ">
+        <%= link_to image_tag(@items.images[1].url,class: "d-block w-40 h-40"),@items.images[1].url%>
+
+      </div>
+
+
+
     </div>
-    <%end%>
+
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+
   </div>
 
 
