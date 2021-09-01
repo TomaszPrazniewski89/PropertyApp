@@ -331,5 +331,20 @@ ActiveAdmin.setup do |config|
   # By default, Active Admin uses Sprocket's asset pipeline.
   # You can switch to using Webpacker here.
   #
-  # config.use_webpacker = true
+  # config.use_webpacker =
+  ## == Devise ==
+  # config.authenticate_with do
+  #   warden.authenticate! scope: :user
+  # end
+  # config.current_user_method(&:current_user)
+
+  ## == CancanCan ==
+  ## 「cancan」 ng
+  ## 「cancancan」 ok
+
+
+
+      config.authorization_adapter = ActiveAdmin::CanCanAdapter
+      # Other configs
+
 end

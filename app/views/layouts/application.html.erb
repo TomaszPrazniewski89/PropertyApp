@@ -48,10 +48,17 @@
 
 
         <li class="nav-item">
-        <%= link_to 'Active Admin Interface',admin_root_path, class: "nav-link active" %>
+        <%= link_to 'Active Admin Interface',new_admin_user_session_path, class: "nav-link active" %>
         </li>
 
+        <% if current_user.nil? %>
+        <li> <%= link_to 'Sign in', new_user_session_path, class: "nav-link active" %> </li>
+        <li> <%= link_to 'Register', new_user_registration_path, class: "nav-link active" %> </li>
 
+
+        <% else %>
+        <li>  <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "nav-link active" %></li>
+        <% end %>
 
 
       </ul>
@@ -68,5 +75,8 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+
+
+
   </body>
 </html>
